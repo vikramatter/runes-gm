@@ -22,11 +22,9 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { name: "Tax Planning & Preparation", path: "/services" },
-    { name: "Auditing & Assurance", path: "/services" },
-    { name: "Financial Accounting & Reporting", path: "/services" },
+    { name: "Financial Modelling and Analysis", path: "/services" },
     { name: "Business Advisory", path: "/services" },
-    { name: "Risk Management", path: "/services" },
+    { name: "Valuations", path: "/services" },
   ];
 
   return (
@@ -35,11 +33,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
             <div className="mb-4">
-              <span className="text-white font-bold text-2xl">RUNES GLOBEMARK<span className="text-secondary">&nbsp;ASSOCIATES INC</span></span>
+              <span className="text-white font-bold text-2xl">RUNES GLOBEMARK<span className="text-secondary">&nbsp;LLP</span></span>
             </div>
-            <p className="text-gray-400 mb-4">
-              For three decades, we have been your trusted partner in navigating the complex landscape of finance and business.
-            </p>
+
             {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-secondary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={18} />

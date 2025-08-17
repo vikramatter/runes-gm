@@ -66,10 +66,9 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-gray-700">
-                Striving to be the most respected and forward-thinking
-                accounting and consulting firm, setting industry standards
-                through excellence, innovation, and an unwavering commitment to
-                client satisfaction.
+                Striving to be the most respected and forward-thinking business modelling and consulting firm,
+                setting industry standards through excellence, innovation, and an unwavering commitment to client
+                satisfaction.
               </p>
             </div>
           </AnimatedSection>
@@ -201,9 +200,11 @@ const About = () => {
                   <Award size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Proven Expertise</h4>
+                  <h4 className="font-bold text-gray-900">Our Team</h4>
                   <p className="text-gray-700">
-                    With three decades of industry experience, we have built a strong reputation for expertise, knowledge, and a proven track record of excellence.
+                    With over a decade of hands-on experience and a solid foundation built
+                    within the Big 4 & Banking Industry, our team delivers expert business modelling solutions with
+                    precision and insight.
                   </p>
                 </div>
               </li>
