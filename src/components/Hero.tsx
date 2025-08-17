@@ -37,10 +37,12 @@ const Hero = () => {
             variants={slideInFromBottom}
           >
             <p className="text-gray-700 mb-4">
-              With three decades of experience, we provide comprehensive financial solutions tailored to your business needs. Our team of certified professionals is committed to your financial success.
+              With over a decade of hands-on experience and a solid foundation built
+              within the Big 4 & Banking Industry, our team delivers expert business modelling solutions with
+              precision and insight.
             </p>
             <p className="text-gray-700 mb-4">
-              We offer a wide range of services including <span className="font-bold">Tax planning, Auditing, Bookkeeping, Business Modelling and Strategic Business Consulting</span> for both domestic and international clients.
+              We offer a wide range of services including <span className="font-bold">Risk Management, Model Reviews, Scenario Analysis & Simulations</span> for both domestic and international clients.
             </p>
           </motion.div>
 
