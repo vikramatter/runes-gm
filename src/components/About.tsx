@@ -1,5 +1,6 @@
 import { Award, Star, Users, Laptop } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import aboutImg from "../assets/officespace.jpg";
 
 const About = () => {
   return (
@@ -259,7 +260,7 @@ const About = () => {
           >
             <div className="rounded-lg shadow-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={aboutImg}
                 alt="Modern office space"
                 className="w-full h-auto object-cover"
                 loading="lazy"

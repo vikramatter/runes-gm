@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "../components/ui/button";
 import { slideInFromBottom, slideInFromLeft } from "../lib/animations";
-import caAuditImg from "../assets/ca-audit.jpg";
+import caAuditImg from "../assets/homepage.jpg";
 
 const Hero = () => {
   return (
