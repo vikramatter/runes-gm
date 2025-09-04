@@ -183,10 +183,10 @@ const Services = ({ selectedServiceId }: ServiceProps) => {
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full cursor-pointer"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    onClick={() => window.location.href = `/services?serviceId=${service.id}`}
+                    onClick={() => window.location.href = `/services/${service.id}`}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") window.location.href = `/services?serviceId=${service.id}` }}
+                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") window.location.href = `/services/${service.id}` }}
                   >
                     <div className="p-6">
                       <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-2xl mb-4">

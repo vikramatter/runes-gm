@@ -3,13 +3,14 @@ import Services from "../components/Services";
 import CTA from "../components/CTA";
 import { pageTransition } from "../lib/animations";
 import { useEffect } from "react";
+import { useRoute } from "wouter";
 
 const ServicesPage = () => {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
-  // Get serviceId from URL params
-  const urlParams = new URLSearchParams(window.location.search);
-  const serviceId = urlParams.get('serviceId') ? parseInt(urlParams.get('serviceId')!) : undefined;
+  // Get serviceId from route params
+  const [, params] = useRoute("/services/:serviceId?");
+  const serviceId = params?.serviceId ? parseInt(params.serviceId) : undefined;
 
   return (
     <motion.div
