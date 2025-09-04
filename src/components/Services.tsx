@@ -2,18 +2,25 @@ import { motion } from "framer-motion";
 import { Briefcase, TrendingUp, ShieldCheck } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { useLocation } from "wouter";
+import { useState, useEffect } from "react";
 import modelling1 from "../assets/modelling1.png";
 import modelling2 from "../assets/modelling2.png";
 import modelling3 from "../assets/modelling3.png";
 import businessModel from "../assets/businessModel.jpg";
 import valuations from "../assets/valuations.jpg";
 
-const Services = () => {
+type ServiceProps = {
+  selectedServiceId?: number; // 1: Financial Modelling, 2: Business Advisory, 3: Valuations
+};
+
+const Services = ({ selectedServiceId }: ServiceProps) => {
   const [location] = useLocation();
   const isServicesPage = location === '/services';
+  const [activeServiceId, setActiveServiceId] = useState(selectedServiceId || 1);
 
   const consultingServices = [
     {
+      id: 1,
       title: "Financial Modelling and Analysis",
       modalDescription: (
         <div className="space-y-4">
@@ -39,6 +46,7 @@ const Services = () => {
       icon: <TrendingUp size={24} />
     },
     {
+      id: 2,
       title: "Business Advisory",
       modalDescription: (
         <div className="space-y-4">
@@ -54,6 +62,7 @@ const Services = () => {
       icon: <Briefcase size={24} />
     },
     {
+      id: 3,
       title: "Valuations",
       modalDescription: (
         <div className="space-y-4">
@@ -70,10 +79,14 @@ const Services = () => {
     }
   ];
 
-  // Get service from URL params for services page
-  const urlParams = new URLSearchParams(window.location.search);
-  const selectedServiceName = urlParams.get('service');
-  const selectedService = consultingServices.find(s => s.title === selectedServiceName);
+  // Update active service when prop changes
+  useEffect(() => {
+    if (selectedServiceId) {
+      setActiveServiceId(selectedServiceId);
+    }
+  }, [selectedServiceId]);
+
+  const selectedService = consultingServices.find(s => s.id === activeServiceId);
 
   return (
     <section id="services" className="py-16 md:py-24 bg-gray-50">
@@ -84,17 +97,17 @@ const Services = () => {
             {/* Circular Navigation */}
             <div className="flex justify-center mb-8">
               <div className="flex space-x-4">
-                {consultingServices.map((service, index) => (
+                {consultingServices.map((service) => (
                   <button
-                    key={service.title}
-                    onClick={() => window.location.href = `/services?service=${encodeURIComponent(service.title)}`}
-                    className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-sm transition-all duration-300 hover:scale-110 ${selectedService.title === service.title
+                    key={service.id}
+                    onClick={() => setActiveServiceId(service.id)}
+                    className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-sm transition-all duration-300 hover:scale-110 ${activeServiceId === service.id
                       ? 'bg-primary shadow-lg ring-4 ring-primary/20'
                       : 'bg-gray-400 hover:bg-gray-500'
                       }`}
                     title={service.title}
                   >
-                    {index + 1}
+                    {service.id}
                   </button>
                 ))}
               </div>
@@ -170,10 +183,10 @@ const Services = () => {
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full cursor-pointer"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    onClick={() => window.location.href = `/services?service=${encodeURIComponent(service.title)}`}
+                    onClick={() => window.location.href = `/services?serviceId=${service.id}`}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") window.location.href = `/services?service=${encodeURIComponent(service.title)}` }}
+                    onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") window.location.href = `/services?serviceId=${service.id}` }}
                   >
                     <div className="p-6">
                       <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-2xl mb-4">

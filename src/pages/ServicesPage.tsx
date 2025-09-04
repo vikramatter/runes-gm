@@ -7,6 +7,10 @@ import { useEffect } from "react";
 const ServicesPage = () => {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
+  // Get serviceId from URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceId = urlParams.get('serviceId') ? parseInt(urlParams.get('serviceId')!) : undefined;
+
   return (
     <motion.div
       initial="initial"
@@ -23,7 +27,7 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      <Services />
+      <Services selectedServiceId={serviceId} />
       <CTA />
     </motion.div>
   );
