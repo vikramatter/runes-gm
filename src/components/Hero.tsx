@@ -28,7 +28,7 @@ const Hero = () => {
           variants={slideInFromLeft}
         >
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-lg">
-            <span className="text-white font-bold">Certified Public Accountants and Consultants</span>
+            <span className="text-white font-bold">Business Modelling and Consultants</span>
           </h1>
 
           {/* Feature Description */}
