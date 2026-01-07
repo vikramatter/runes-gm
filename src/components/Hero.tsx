@@ -27,8 +27,8 @@ const Hero = () => {
           animate="visible"
           variants={slideInFromLeft}
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white leading-tight drop-shadow-lg">
-            <span className="text-white font-bold">Business Modelling and Consultants</span>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white leading-tight drop-shadow-lg">
+            <span className="text-white font-bold">Business Modelling and Consulting</span>
           </h1>
 
           {/* Feature Description */}

@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import IconOnly from "../assets/IconOnly.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +53,19 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-primary font-bold text-3xl flex items-center cursor-pointer"
+              className="flex items-center cursor-pointer gap-3"
             >
-              RUNES GLOBEMARK LLP
+              <img
+                src={IconOnly}
+                alt="Runes Globemark Logo"
+                className="h-10 w-10 md:h-12 md:w-12 object-contain"
+              />
+              <div className="flex flex-col">
+                <span className="text-primary font-bold text-2xl md:text-3xl leading-tight">
+                  RUNES GLOBEMARK LLP
+                </span>
+
+              </div>
             </motion.div>
           </Link>
         </div>
