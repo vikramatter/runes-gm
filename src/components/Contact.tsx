@@ -266,7 +266,7 @@ onChange={(e) => setEmail(e.target.value)}/>
                     <div>
                       <h4 className="font-bold text-gray-900">Hours</h4>
                       <p className="text-gray-700">
-                        Monday - Friday: 9:00 AM - 6:00 PM
+                        Monday - Friday: 8:00 AM-6 PM (EST)
                         <br />
                         Saturday & Sunday: Closed
                       </p>
