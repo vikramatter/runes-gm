@@ -22,9 +22,9 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { name: "Financial Modelling and Analysis", path: "/services" },
-    { name: "Business Advisory", path: "/services" },
-    { name: "Valuations", path: "/services" },
+    { name: "Financial Modelling and Analysis", path: "/services?serviceId=1" },
+    { name: "Business Advisory", path: "/services?serviceId=2" },
+    { name: "Valuations", path: "/services?serviceId=3" },
   ];
 
   return (
